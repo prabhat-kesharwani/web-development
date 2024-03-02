@@ -1,0 +1,21 @@
+.box{
+    height: 100px;
+    width: 100px;
+    border: 1px solid black;
+    background-color: rgb(186, 101, 101);
+    margin: 2px;
+    padding: 2px;
+    text-align: center;
+}
+#main{
+    height: 100px;
+    width: 250px;
+    background-color: green;
+    border: 1px solid black;
+}
+.content{
+    color: red;
+}
+.newclass{
+    background-color: blue;
+}

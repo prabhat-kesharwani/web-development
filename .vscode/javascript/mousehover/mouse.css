@@ -1,0 +1,25 @@
+.box
+{
+    display:flex;
+    height: 200px;
+    width: 300px;
+    background-color: dodgerblue;   
+    color: rgb(74, 109, 2);
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    padding: 20px;
+    margin: 4rem;
+}
+.changebox{
+    height: 400px;
+    width: 400px;
+    background-color: rebeccapurple;
+    color: rgb(4, 168, 37);
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    padding: 50px;
+    margin: 8rem;
+    font-size: 50px;
+}

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="answer">how many student in your class ?</p>
+    <p id="para">66</p>
+    <button type="button" id="btn" onclick="answer()">answer</button>
+    <script>
+        //document.write(66);
+    //    console.log(66);
+  //  alert("invalid page");
+ // window.alert("invalid page");
+ function answer(){
+    let para=document.getElementById('para');
+    let btn=document.getElementById('btn');
+    if(para.style.display!='none'){
+        para.style.display='none';
+    }
+    else{
+        para.style.display='block';
+    }
+ }
+    </script>
+</body>
+</html>

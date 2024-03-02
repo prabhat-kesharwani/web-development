@@ -1,0 +1,15 @@
+.content{
+    width: 100px;
+    height: 100px;
+    background-color: blueviolet;
+    color: rgb(17, 225, 17);
+    margin: 10px;
+}
+.btn{
+    background-color: blue;
+    font-size: 30px;
+    color:white;
+}
+body{
+    background-color:black ;
+}

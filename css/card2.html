@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+        }
+.container{
+    height: 700px;
+    background-color: #96d3fc;
+background-image: linear-gradient(135deg, #8BC6EC 0%, #9599E2 100%);
+display: flex;
+justify-content: center;
+align-items: center;
+
+}
+.card{
+    height: 510px;
+    width: 320px;
+    background-color: white;
+    border-radius: 10px;
+}
+#img1{
+    height: 150px ;
+    width: 320px;
+  border-top-right-radius: 10px;
+  border-top-left-radius: 10px;
+  
+}
+#img1:hover{
+    transform: scale(1.2);
+}
+.box{
+    height:380px ;
+    width: 270px;
+   border-radius: 10px;
+     display: flex;
+    flex-direction: column;
+}
+.content{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    align-content: center;
+}
+.para{
+    position: relative;
+    top: 50px;
+    left: 40px;
+}
+.heading{
+    position: relative;
+    top: 30px;
+    left: 20px;
+}
+.box1{
+    height: 40px;
+    width: 275px ;
+    background-color: rgb(156, 214, 241);
+    border-radius: 5px;
+    position: relative;
+    left: 27px;
+    top: 78px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.b1{
+    height: 40px;
+    width: 275px ;
+    background-color: rgb(3, 25, 133);
+    border-radius: 5px;
+    position: relative;
+    left: 27px;
+    top: 108px;
+    box-shadow:2px 3px 20px black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.P2{
+    position: relative;
+    top: 138px;
+    left: 27px;
+}
+.photo{
+    height: 25px;
+    width: 25px;
+}
+.inbox{
+    height: 25px;
+    width: 100px;
+    position: relative;
+    bottom: 5px;
+    right: 13px;
+}
+    </style>
+</head>
+<body>
+<div class="container">
+   <div class="card">
+       <div class="box">
+        <img id="img1" src="https://media.istockphoto.com/id/483147081/photo/futuristic-circuit-board-blue-with-electrons.jpg?s=612x612&w=0&k=20&c=cOlFe3m-qcm4zTmCKxVmX4huAlW9mpwaR2oPZhZjqK0=" alt="scanner">
+        <div class="content">
+        <h2 class="heading">order summary</h2>
+        <p class="para">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus nihil dolores illo
+             veritatis, at et the things that u try to doia imoliehf</p>
+             <div class="box1">
+                <img class="photo" src="https://icon-library.com/images/song-icon-png/song-icon-png-13.jpg" alt="">
+                <div class="inbox">
+                    <p>Annual Plan
+                        $99.9/year
+                    </p>
+                </div>
+                <a href="abc.com">change</a>
+            </div>
+               <div class="b1">
+               <p style="color: white;">Proceed to Payment</p> 
+                </div>
+                <div class="P2">
+                    <p>Cancel order</p>
+                </div>
+       </div>
+   </div>
+</div>
+    
+</body>
+</html>

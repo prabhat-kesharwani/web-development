@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>show and hide content </title>
+    <style>
+        #btn{
+            padding: 0.5rem;
+            background-color: rgb(50, 50, 197);
+            border: 3px solid black;
+            border-radius:5px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>welcome to code with harry</h1>
+        <div class="items" id="para">
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Possimus nemo culpa ea pariatur,
+             amet obcaecati! Adipisci, laborum. Id dolorum nulla repellat accusantium 
+            voluptatem facilis maxime tempore rem omnis impedit in asperiores, tempora ipsum sequi.
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. At veniam architecto doloremque
+             numquam, eaque accusamus doloribus deserunt. Beatae, deleniti numquam.
+        </div>
+
+    </div>
+    <button id="btn" onclick="hide()">Show/hide</button>
+    <script>
+         let para=document.getElementById('para');
+       para.addEventListener('mouseover',function run(){
+             alert('mouse inside')
+        });
+        para.addEventListener('mouseout',function run(){
+             alert('mouse outside')
+        });
+        function hide(){
+            let para=document.getElementById('para');
+        let btn=document.getElementById('btn');
+        if (para.style.display!='none'){
+            para.style.display='none';
+        }
+        else{
+            para.style.display='block';
+        }
+    }
+    </script>
+</body>
+</html>

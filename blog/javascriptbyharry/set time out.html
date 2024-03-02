@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>set time out and set interval</title>
+</head>
+<body>
+    <div class="container">
+       Time is now <span id="time">Time</span>
+    </div>
+    <script>
+        function greet(name){
+            console.log("hello everyone " + name + " this side");
+        }
+        // only one time a thing is run
+     //   setTimeout(greet,5000,"prabhat");
+               timeout= setInterval(greet,2000,"prabhat");
+               console.log(timeout); //  this will give the id number
+                clearInterval(timeout);// this will clear the time 
+                function displayTime(){
+                     time =new Date();
+                     console.log(time);
+                     document.getElementById('time').innerHTML=time;
+                }
+                setInterval(displayTime,1000);
+    </script>
+</body>
+</html>

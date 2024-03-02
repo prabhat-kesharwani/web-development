@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GRID1</title>
+    <style>
+         *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            height: 100%;
+            width: 100%;
+            
+        }
+        .container{
+              height: 100%;
+              width: 100%;
+              background-color: rgb(182, 174, 60);
+              padding: 4rem;
+              gap: 1rem;
+              display: grid;
+             
+             grid-template-areas:  
+              "navigation header header header"
+              "navigation card1 card2 card3"
+              "navigation card1 card2 card4"
+              "navigation footer footer footer"
+              ;
+        }
+        .items{
+            background-color: rgb(21, 99, 50);
+            padding: 1rem;
+            color: white;
+            border: 3px solid black;
+            text-align: center;
+           }
+
+        #header{
+            grid-area:header;
+        }
+        #navigation{
+            grid-area:navigation;
+        }
+        #card1{
+            grid-area:card1;
+        }
+        #card2{
+            grid-area:card2;
+        }
+        #card3{
+            grid-area:card3;
+        }
+        #card4{
+            grid-area:card4;
+        }
+        #footer{
+            grid-area:footer;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <div class="items" id="navigation"> navigation</div>
+    <div class="items" id="header"> header</div>
+    <div class="items" id="card1">card1</div>
+    <div class="items" id="card2">card2</div>
+    <div class="items" id="card3">card3</div>
+    <div class="items" id="card4">card4</div>
+    <div class="items" id="footer">footer</div>
+</div>
+</body>
+</html>

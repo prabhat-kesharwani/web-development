@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>grid2</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            height: 100%;
+            width: 100%;
+            
+        }
+        .container{
+            height: 100%;
+            width: 100%;
+            background-color: aquamarine;
+            padding: 4rem;
+            gap: 1rem;
+            display: grid;
+
+            grid-template-areas: 
+              "header1 header2 header3 header4"
+              "sidebar content1 content1 content2"
+              "sidebar content3 content4 content2"
+            ;
+        }
+        .items{
+            padding: 1rem;
+            background-color: rgb(35, 54, 16);
+            border: 3px solid black;
+            color: white;
+            text-align: center;
+        }
+        #header1{
+            grid-area: header1;
+           }
+           #header2{
+            grid-area: header2;
+           }
+           #header3{
+            grid-area: header3;
+           }
+           #header4{
+            grid-area: header4;
+           }
+           #sidebar{
+            grid-area:sidebar;
+           }
+           #content1{
+            grid-area: content1;
+           }
+           #content2{
+            grid-area: content2;
+           }
+           #content3{
+            grid-area: content3;
+           }
+           #content4{
+            grid-area: content4;
+           }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="items" id="header1">heading</div>
+        <div class="items" id="header2">heading</div>
+        <div class="items" id="header3">heading</div>
+        <div class="items" id="header4">heading</div>
+        <div class="items" id="sidebar">heading</div>
+        <div class="items" id="content1">heading</div>
+        <div class="items" id="content2">heading</div>
+        <div class="items" id="content3">heading</div>
+        <div class="items" id="content4">heading</div>
+    </div>
+</body>
+</html>

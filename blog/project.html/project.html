@@ -1,0 +1,628 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>resume builder</title>
+
+    <style>
+        :root{
+    --dark-blue:#131339;
+    --light-blue:#19194d;
+    --darkeslateblue:#483d8b;
+    --white:#fff;
+    --light-white:#aaa;
+    --black:#1e1e1e;
+    --light-bg:#252526;
+    --lightslateblue:#4f468b;
+}
+        .page_container{
+    margin-top: 50px;
+    position:relative;
+    display:grid;
+    grid-template-columns: 1fr 2fr;
+    min-height: 1000px;
+    width:100%;
+    max-width: 1000px;
+    background-color: var(--white);
+    box-shadow: 0 35px 55px rgba(0, 0, 0, 0.1);
+    margin: auto; 
+    margin-top: 50px; 
+    justify-content: center;
+}
+
+.page_container .left_column{
+    padding: 40px;
+    position:relative;
+    background-color: var(--darkeslateblue);
+}
+
+.profile{
+    position:relative;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 20px;
+    border-bottom: 1px splid rgba(255,255,255,0.2);
+    
+}
+
+.profile .image{
+    position:relative;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-bottom: 20px;
+}
+
+.profile .image img{
+    position:relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover ;
+}
+
+.profile h2{
+    color: var(--white);
+    font-size: 2rem;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    text-align: center;
+    font-weight: 600;
+    line-height: 1.4rem; 
+}
+
+.profile span.titl {
+    color: var(--white);
+    font-size: 2rem;
+    font-weight: 300;
+    text-align: center;
+    display: block;
+    margin-top: 5px; 
+}
+
+
+.contactInfo{
+    padding-top: 40px;
+}
+
+.title{
+    margin-top: 5px;
+    color: var(--white);
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: 1px;
+    margin-bottom: 20px;
+    font-size: 1.8rem;
+}
+
+.contactInfo ul{
+    position: relative;
+    font-size: 1.5rem;
+}
+
+.contactInfo ul li{
+    position: relative;
+    list-style: none;
+    margin: 10px 0;
+    cursor: pointer;
+}
+
+.contactInfo ul li .icon{
+    display: inline-block;
+    width: 30px;
+    font-size: 18px;
+    color: rgba(0, 255, 255, 0.578);
+}
+
+.contactInfo ul li span{
+    font-weight: 300;
+    color: var(--white);
+}
+
+
+.titlee{
+    margin-top: 3rem;
+    color: var(--white);
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: 1px;
+    margin-bottom: 20px;
+    font-size: 1.8rem;
+}
+
+.contactInfoeducation li{
+    margin-bottom: 15px;
+}
+
+.contactInfoeducation h5{
+    font-size: 1.8rem;
+    color: rgba(0, 255, 255, 0.578);
+    font-weight: 500;
+}
+
+.contactInfoeducation h4{
+    font-size: 1.5rem;
+    color: var(--white);
+    font-weight: 500;
+}
+
+
+.page_container .right_column{
+    padding: 40px;
+    position:relative;
+    background-color: var(--white);
+}
+
+
+
+.right_column .education,
+.right_column .projects {
+    margin-top: 30px; 
+}
+
+.right_column .about {
+    margin-bottom: 30px;
+    border-left: 4px solid var(--darkeslateblue); /* Colored bar */
+    padding-left: 20px;
+}
+
+.right_column .about h3 {
+    font-size: 2rem;
+    color: var(--darkeslateblue);
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.right_column .about p {
+    font-size: 1.6rem; 
+    color: #555;
+    line-height: 1.6;
+}
+
+
+
+.right_column .skills {
+    margin-bottom: 30px;
+    border-left: 4px solid var(--darkeslateblue); 
+    padding-left: 20px;
+}
+
+.right_column .skills h3 {
+    font-size: 2rem; 
+    color: var(--darkeslateblue);
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.right_column .skills ul li {
+    font-size: 1.6rem; 
+    color: #555; 
+    margin-bottom: 5px;
+}
+
+
+.right_column .experience {
+    margin-bottom: 30px;
+}
+
+.right_column .experience h3 {
+    font-size: 2rem; 
+    color: var(--darkeslateblue);
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+.right_column .job {
+    margin-bottom: 20px;
+    border-left: 4px solid var(--darkeslateblue);
+    padding-left: 20px;
+}
+
+.right_column .job h4 {
+    font-size: 1.6rem; 
+    color: var(--darkeslateblue);
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+
+.right_column .job p {
+    font-size: 1.4rem;
+    color: #555;
+    margin-bottom: 10px;
+}
+
+.right_column .job ul {
+    list-style-type: disc;
+    padding-left: 20px;
+}
+
+.right_column .job ul li {
+    font-size: 1.3rem;
+    color: #666;
+    margin-bottom: 5px;
+}
+
+
+
+
+.right_column .projects {
+    margin-bottom: 30px;
+    border-left: 4px solid var(--darkeslateblue);
+    padding-left: 20px;
+}
+
+.right_column .projects h3 {
+    font-size: 2rem;
+    color: var(--darkeslateblue);
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+
+
+.right_column .strength {
+    margin-bottom: 30px;
+    border-left: 4px solid var(--darkeslateblue); 
+    padding-left: 20px;
+}
+
+.right_column .strength h3 {
+    font-size: 2rem; 
+    color: var(--darkeslateblue);
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.right_column .strength p {
+    font-size: 1.4rem;
+    color: #555;
+    margin-bottom: 10px;
+}
+
+
+
+.right_column .degree {
+    margin-bottom: 15px;
+}
+
+.right_column .degree h4 {
+    color: var(--darkeslateblue);
+    font-size: 1.6rem;
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+
+.right_column .degree p {
+    font-size: 1.4rem;
+    color: #555;
+    margin-bottom: 10px;
+}
+
+.right_column .projects .project {
+    margin-bottom: 20px;
+}
+
+.right_column .projects .project h4 {
+    color: var(--darkeslateblue);
+    font-size: 1.6rem;
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+
+.right_column .projects .project p {
+    font-size: 1.4rem;
+    color: #555;
+    margin-bottom: 10px;
+}
+
+button {
+    display: inline-block;
+    padding: 10px 20px; /* Adjust padding  */
+    background-color:var(--lightslateblue);
+    color: var(--white); 
+    border: none; /* Remove border */
+    border-radius: 5px; /* Rounded corners */
+    font-size: 16px; 
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    
+}
+
+
+button:hover {
+    background-color: var(--darkeslateblue);
+}
+
+@media print {
+    body *{
+        visibility: hidden;
+    }
+    .page_container *{
+        visibility: visible;
+    }
+
+    body {
+        background-color: white; 
+        margin: 0;
+        padding: 0; 
+    }
+    
+    .page_container {
+        margin: 0; 
+        box-shadow: none; 
+    }
+
+    .left_column {
+        background-color: var(--darkeslateblue);
+    }
+
+}
+
+@media only screen and (max-width: 768px) {
+    .page_container {
+        grid-template-columns: 1fr; /* Change to a single column layout */
+        margin-top: 20px; /* Adjust the top margin for better spacing on smaller screens */
+    }
+
+    .left_column, .right_column {
+        padding: 20px; /* Adjust padding for better spacing on smaller screens */
+    }
+
+    .profile .image {
+        width: 150px; /* Adjust the image size for smaller screens */
+        height: 150px;
+    }
+
+    .profile h2 {
+        font-size: 2rem; 
+    }
+
+    .profile .titl {
+        font-size: 1.5rem; 
+    }
+
+    .contactInfo ul, .contactInfoeducation ul {
+        font-size: 1.3rem; 
+    }
+
+    .right_column .about h3,
+    .right_column .skills h3,
+    .right_column .experience h3,
+    .right_column .projects h3,
+    .right_column .strength h3,
+    .right_column .degree h4,
+    .right_column .projects .project h4 {
+        font-size: 1.8rem; 
+    }
+
+    .right_column .about p,
+    .right_column .skills ul li,
+    .right_column .job h4,
+    .right_column .job p,
+    .right_column .degree p,
+    .right_column .projects .project p,
+    .right_column .strength p {
+        font-size: 1.4rem; 
+    }
+}
+@media only screen and (max-width: 450px) {
+    .page_container {
+        grid-template-columns: 1fr; 
+        margin-top: 20px; 
+    }
+
+    .left_column, .right_column {
+        padding: 20px;
+    }
+
+    .profile .image {
+        width: 120px; 
+        height: 120px;
+    }
+
+    .profile h2 {
+        font-size: 1.8rem; 
+    }
+
+    .profile .titl {
+        font-size: 1.3rem; 
+    }
+
+    .contactInfo ul, .contactInfoeducation ul {
+        font-size: 1.2rem; 
+    }
+
+    .right_column .about h3,
+    .right_column .skills h3,
+    .right_column .experience h3,
+    .right_column .projects h3,
+    .right_column .strength h3,
+    .right_column .degree h4,
+    .right_column .projects .project h4 {
+        font-size: 1.5rem; 
+    }
+
+    .right_column .about p,
+    .right_column .skills ul li,
+    .right_column .job h4,
+    .right_column .job p,
+    .right_column .degree p,
+    .right_column .projects .project p,
+    .right_column .strength p {
+        font-size: 1.2rem; 
+    }
+}
+
+    </style>
+    
+</head>
+
+<body>
+
+<!--head and navbar-->
+
+    <div class="page_container">
+        <div class="left_column">
+            <div class="profile">
+                <div class="image">
+                    <img src="https://i.pinimg.com/originals/21/20/b0/2120b058cb9946e36306778243eadae5.jpg" alt="Your Photo" id="profileImage" contenteditable="true">
+                    <input type="file" accept="image/*" id="profileImageInput" style="display: none;">
+                    <label for="profileImageInput" id="uploadLabel">Click to Upload</label>
+                </div>
+                <h2 contenteditable="true">Your Name</h2>
+                <span class="titl" contenteditable="true">Web Developer</span>
+            </div>
+            <div class="contactInfo">
+                <h3 class="title">Contact Info</h3>
+                <ul contenteditable="true">
+                    <li>
+                        <span class="icon"><i class="fa-solid fa-phone"></i></span>
+                        <span class="text" contenteditable="true">+91 999XXXXXXX</span>
+                    </li>
+    
+                    <li>
+                        <span class="icon"><i class="fa-solid fa-envelope"></i></span>
+                        <span class="text" contenteditable="true">coollagers23@gmail.com</span>
+                    </li>
+    
+                    <li>
+                        <span class="icon"><i class="fa-brands fa-github"></i></span>
+                        <span class="text" contenteditable="true">github.io</span>
+                    </li>
+    
+                    <li>
+                        <span class="icon"><i class="fa-brands fa-linkedin"></i></span>
+                        <span class="text" contenteditable="true">Linkdin.com</span>
+                    </li>
+    
+                    <li>
+                        <span class="icon"><i class="fa-solid fa-location-dot"></i></span>
+                        <span class="text" contenteditable="true">sec -XX , Noida</span>
+                    </li>
+                    <li>
+                        <span class="icon"></span>
+                        <span class="text" contenteditable="true">up,India</span>
+                    </li>
+                </ul>
+            </div>
+    
+            <div class="contactInfoeducation">
+                <h3 class="titlee" contenteditable="true">Education</h3>
+                <ul contenteditable="true">
+                    <li>
+                        <h5 contenteditable="true">2020-2024</h5>
+                        <h4 contenteditable="true">B-Tech in computer science</h4>
+                        <h4 contenteditable="true">University Name</h4>
+                    </li>
+    
+                    <li>
+                        <h5 contenteditable="true">20XX-20XX</h5>
+                        <h4 contenteditable="true">Schooling</h4>
+                        <h4 contenteditable="true">University Name</h4>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    
+        <div class="right_column">
+            <div class="about">
+                <h3>About Me</h3>
+                <p contenteditable="true">This is fully editable just click . and add what you wanna a add, you can edit photo as well,you are just click away.</p>
+            </div>
+            <div class="skills">
+                <h3>Skills</h3>
+                <ul contenteditable="true">
+                    <li contenteditable="true">Web Development</li>
+                    <li contenteditable="true">HTML, CSS, JavaScript</li>
+                    <li contenteditable="true">React, Node.js</li>
+                </ul>
+            </div>
+            <div class="experience">
+                <h3>Work Experience</h3>
+                <div class="job">
+                    <h4 contenteditable="true">Web Developer</h4>
+                    <p contenteditable="true">XYZ Company - 2020 to Present</p>
+                    <ul contenteditable="true">
+                        <li contenteditable="true">Developed and maintained company websites.</li>
+                        <li contenteditable="true">Collaborated with cross-functional teams on projects.</li>
+                        <li contenteditable="true">Implemented responsive web design principles.</li>
+                    </ul>
+                </div>
+                <div class="job">
+                    <h4 contenteditable="true">Frontend Developer</h4>
+                    <p contenteditable="true">ABC Agency - 2018 to 2020</p>
+                    <ul contenteditable="true">
+                        <li contenteditable="true">Designed and coded user-friendly interfaces.</li>
+                        <li contenteditable="true">Optimized websites for performance and SEO.</li>
+                        <li contenteditable="true">Worked with clients to understand their needs and preferences.</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="projects">
+                <h3 contenteditable="true">Projects</h3>
+                <div class="project">
+                    <h4 contenteditable="true">Portfolio Website</h4>
+                    <p contenteditable="true">Designed and developed a personal portfolio website showcasing my skills and projects.</p>
+                </div>
+                <div class="project">
+                    <h4 contenteditable="true">E-commerce Website</h4>
+                    <p contenteditable="true">Created a responsive e-commerce website using HTML, CSS, and JavaScript.</p>
+                </div>
+            </div>
+            <div class="strength">
+                <h3 contenteditable="true">Greatest Strength</h3>
+                <p contenteditable="true">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla ac elit ut purus sodales gravida.</p>
+            </div>
+        </div>
+    </div>
+
+    <button>Download/print</button>
+<script>
+    var btn =document.querySelector("button");
+    btn.onclick = () =>{
+    window.print(10);
+}
+</script>
+    <script>
+        const profileImage = document.getElementById('profileImage');
+        const profileImageInput = document.getElementById('profileImageInput');
+        const uploadLabel = document.getElementById('uploadLabel');
+    
+        profileImage.addEventListener('click', () => {
+            profileImageInput.click();
+        });
+    
+        profileImageInput.addEventListener('change', (event) => {
+            const file = event.target.files[0];
+            if (file) {
+                const imageUrl = URL.createObjectURL(file);
+                profileImage.src = imageUrl;
+            }
+        });
+    </script>
+
+    
+
+<!--footer-->
+
+<footer class="footer">
+
+    <section>
+        <h2>Prefer desktop for printing or for saving purpose <br>(while printing/download click on background graphics)</h2>
+        <div class="credit">&copy;2023<span>prakhar's team</span>| All Rights Reserved.</div>
+
+    </section>
+</footer>
+
+</body>
+</html> 
+    
+    
+
+
+

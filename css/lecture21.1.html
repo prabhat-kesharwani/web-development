@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<style>
+    .container{
+     
+        width: 400px;
+        padding: 2px;
+        margin:2px;
+        background-color: chartreuse;
+      display: flex;
+      flex-direction: row;
+    }
+    #boxleft{
+    
+     width: 50%;
+     margin: 2px;
+     padding: 2px;
+     background-color: crimson;
+     border: 2px;
+    }
+    
+    #boxright{
+        border: 2px black;
+        background-color: aquamarine;
+        height:200px;
+        width: 200px;
+        }
+        @media (max-width:640px) {
+            .container{
+            flex-direction: column;
+        background-color: orange;
+            }}
+</style>
+</head>
+<body>
+    <div class="container">
+        <div id="boxleft">
+            <p style="border: 2px yellow;">text 1</p>
+            <p style="border: 2px yellow;">text2</p>
+        </div>
+        <div id="boxright">
+            <img src="https://rukminim1.flixcart.com/image/850/1000/juh9ksw0/poster/g/8/z/large-pnf-20x28-9630-maharana-pratap-uv-textured-water-proof-original-imaffjmudwb8uvkf.jpeg?q=20" 
+            alt="" height="200px" width="200px">
+        </div>
+    </div>
+</body>
+</html>
